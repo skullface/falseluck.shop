@@ -42,9 +42,10 @@
       body {
         display: flex;
         flex-direction: column;
-        font-family: "Courier Prime", Courier New, Courier, monospace;
-        padding: 3rem;
         gap: 3rem;
+        padding: 3rem;
+        font-family: "Courier Prime", Courier New, Courier, monospace;
+        text-wrap: pretty;
       }
       
       h1 {
@@ -106,6 +107,21 @@
         a:hover, a:active {
           color: cyan;
           text-decoration-color: cyan;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        body {
+          padding: 2rem;
+        }
+      
+        label, input {
+          display: block;
+          margin-bottom: 1rem;
+        }
+        
+        input[type=email] {
+          width: 90%;
         }
       }
     </style>
